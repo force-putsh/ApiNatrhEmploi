@@ -1,0 +1,282 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel API",
+        "description": "Laravel API Documentation",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/emploi": {
+            "get": {
+                "tags": [
+                    "emploi"
+                ],
+                "summary": "Get all emploi",
+                "description": "Get all emploi",
+                "operationId": "b11a36b032be7179307cf411dc9e0fa2",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/api/emploi/{id}": {
+            "get": {
+                "tags": [
+                    "emploi"
+                ],
+                "summary": "Get emploi by id",
+                "description": "Get emploi by id",
+                "operationId": "d8cc540d95cfe44cd08739368674fe68",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "emploi id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/cv": {
+            "get": {
+                "tags": [
+                    "cv"
+                ],
+                "summary": "Get all cv",
+                "description": "Get all cv",
+                "operationId": "8ea75200674763a96d7cba5e2b3983df",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/cv/{id}": {
+            "get": {
+                "tags": [
+                    "cv"
+                ],
+                "summary": "Get cv by id",
+                "description": "Get cv by id",
+                "operationId": "82a764a06bdd66d1541674b0d57d5612",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "cv id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/user": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Create new user",
+                "description": "Create new user",
+                "operationId": "592057d41662a7f58d769cc16fddfc7c",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "user name",
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "description": "user email",
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "description": "user password",
+                                        "type": "string"
+                                    },
+                                    "meta": {
+                                        "description": "user meta",
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "key": {
+                                                    "description": "user meta key",
+                                                    "type": "string"
+                                                },
+                                                "value": {
+                                                    "description": "user meta value",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/users": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get all users",
+                "description": "Get all users",
+                "operationId": "c744960e46c73aa9f6f3453712f44f68",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "login"
+                ],
+                "summary": "Login",
+                "description": "Login",
+                "operationId": "c64fdb270498e81061530febf0dec4be",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "description": "user email",
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "description": "user password",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/logout": {
+            "post": {
+                "tags": [
+                    "logout"
+                ],
+                "summary": "Logout",
+                "description": "Logout",
+                "operationId": "e95cf528bb67fc0f040b55ef5a5aab8f",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "token": {
+                                        "description": "user token",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        }
+    }
+}
